@@ -1,8 +1,15 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* global rules */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
+  background-color: #eeeeee;
+  font-family: "Inter", sans-serif;
 }
 a {
   text-decoration: none;
@@ -17,19 +24,22 @@ li {
 p {
   line-height: 2;
   font-size: 18px;
+  color : gray;
 }
 
 h1 {
   letter-spacing: -1px;
   font-size: 62px;
   margin: 15px 0px 10px;
+  color: rgb(14, 11, 61)
 }
 h2 {
   font-size: 56px;
+  color: rgb(14, 11, 61)
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 35px;
 }
 .btn {
   padding: 15px 30px;
@@ -43,9 +53,18 @@ h3 {
 }
 
 .btn-bg {
-  background-color: rgb(12, 41, 99);
+  background-color: rgb(15, 55, 134);
   color: #fff;
 }
+
+button{
+  border: none;
+  cursor: pointer;
+}
+ span{
+  background-color: rgba(36, 92, 206, 0.301);
+}
+
 .clearfix {
   clear: both;
 }
@@ -72,3 +91,85 @@ h3 {
   padding: 20px;
   text-align: center;
 }
+
+/* Template and Email section */
+.template , .email{
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+.template-title , .email-title {
+  float: left;
+}
+.template-photo , .email-photo{
+  float: right;
+  background-color: silver;
+  padding: 60px;
+  border-radius: 15px;
+}
+.template-photo img , .email-photo img{
+  width: 470px;
+}
+/* search section and ai section */
+.search , .ai{
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.search-photo , .ai-photo { 
+  float: left;
+  background-color: silver;
+  padding: 60px;
+  border-radius: 15px;
+}
+.search-photo img , .ai-photo img {
+  width: 470px;
+}
+.search-title , .ai-title, .testimonials-title {
+  float: right;
+  padding: 60px;
+}
+/* Testimonails  */
+.testimonials {
+  width: 85%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: silver;
+  border-radius: 20px;
+}
+.testimonials-photo{
+   float: left;
+  padding: 15px; 
+  border-radius: 15px;
+
+}
+.testimonials-photo img{
+   width: 250px;
+}
+.testimonials-title img{
+  width: 75px;
+  margin-bottom: 30px;
+}
+/* footer */
+.footer{
+  background-color: rgb(14, 11, 61) ;
+}
+.footer-container{
+  width: 85%;
+  margin: auto;
+  padding: 25px;
+}
+.footer-logo{
+  float: left;
+}
+.footer-links{
+  float: right;
+}
+.icons i{
+  font-size: 18px;
+  color : white;
+  margin-left: 15px;
+}
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Page</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Validation Page</h1>
+      <form id="user-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+          <p class="error hidden name-error">Enter at least 3 characters</p>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+          <p class="error hidden password-error">
+            Password must be at least 8 characters
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+          <p class="error hidden email-error">Enter a valid email address</p>
+        </div>
+
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="inline-options">
+            <input type="radio" name="gender" value="Male" id="male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="Female" id="female" />
+            <label for="female">Female</label>
+          </div>
+          <p class="error hidden gender-error">Please select gender</p>
+        </div>
+
+        <div class="form-group">
+          <label>Sports:</label>
+          <div class="inline-options">
+            <input
+              type="checkbox"
+              name="sports"
+              value="Football"
+              id="football" />
+            <label for="football">Football</label>
+            <input
+              type="checkbox"
+              name="sports"
+              value="Basketball"
+              id="basketball" />
+            <label for="basketball">Basketball</label>
+            <input type="checkbox" name="sports" value="Tennis" id="tennis" />
+            <label for="tennis">Tennis</label>
+          </div>
+          <p class="error hidden sports-error">
+            Please select at least one sport
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <select id="country">
+            <option value="">Select Country</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="UAE">UAE</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+          </select>
+          <p class="error hidden country-error">Please select your country</p>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="submit-btn">Submit</button>
+          <button type="reset" class="reset-btn">Reset</button>
+        </div>
+      </form>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

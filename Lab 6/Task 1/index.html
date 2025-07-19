@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="data">
+      <div class="userName">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+        <p class="hidden name-error">
+          Please Enter your name , use more than 3 characters
+        </p>
+      </div>
+      <div class="userId">
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" />
+        <p class="hidden id-error">Please Enter your id</p>
+        <p class="hidden id-repeat">please Use another ID</p>
+      </div>
+      <div class="userAge">
+        <label for="age">Age:</label>
+        <input type="text" name="age" id="age" />
+        <p class="hidden age-error">Enter your age :</p>
+      </div>
+      <div class="btn">
+        <button type="submit" class="submit-btn">Add student</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Age</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

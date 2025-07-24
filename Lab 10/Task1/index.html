@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th colspan="2">Registration Form</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>First Name</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>User Name</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Track</td>
+          <td>
+            <select name="trackname" id="trackname">
+              <option value="iti" selected>ITI Course</option>
+              <option value="nti">NTI Course</option>
+              <option value="depi">DEPI Course</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2">Gender</td>
+          <td>
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">Male</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Favorites</td>
+          <td>
+            <input type="checkbox" name="fav" id="football" />
+            <label for="football">Football</label>
+            <input type="checkbox" name="fav" id="basketball" />
+            <label for="basketball">Basketball</label><br />
+            <input type="checkbox" name="fav" id="games" />
+            <label for="games">Games</label>
+            <input type="checkbox" name="fav" id="reading" />
+            <label for="reading">Reading</label><br />
+            <input type="checkbox" name="fav" id="swimming" />
+            <label for="swimming">Swimming</label>
+            <input type="checkbox" name="fav" id="travel" />
+            <label for="travel">Travel</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Description</td>
+          <td><textarea name="description" id="description"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div><input type="file" name="fileUpload" /></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

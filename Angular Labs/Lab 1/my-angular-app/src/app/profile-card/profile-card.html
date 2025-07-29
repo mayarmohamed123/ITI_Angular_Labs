@@ -1,0 +1,9 @@
+@if (!hidden) {
+<div class="card">
+  <img [src]="userImage" alt="..." class="profile-img" />
+  <h2>{{ userName | uppercase }}</h2>
+  <h4>{{ job }}</h4>
+  <p class="bio">{{ bio }}</p>
+  <button (click)="removeProfile()">Remove</button>
+</div>
+}

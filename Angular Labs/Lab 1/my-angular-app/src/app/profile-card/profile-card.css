@@ -1,0 +1,50 @@
+/* src/app/profile-card/profile-card.component.css */
+.card {
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+}
+
+h4 {
+  margin: 5px 0;
+  color: #777;
+}
+
+.bio {
+  font-size: 14px;
+  margin: 15px 0;
+  color: #333;
+}
+
+button {
+  background-color: #ff3c3c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #d10000;
+}

@@ -1,0 +1,14 @@
+<div class="card-container">
+  @for (user of users; track user.id; let i = $index; let last = $last) {
+  <div
+    class="user-card"
+    [style.background-color]="last ? '#ff4d4d' : '#f1f1f1'"
+    [style.color]="last ? 'white' : 'black'"
+  >
+    <h2>{{ user.name }}</h2>
+    <p><strong>Job:</strong> {{ user.job }}</p>
+    <p><strong>Bio:</strong> {{ user.bio }}</p>
+    <button (click)="remove(i)">Remove</button>
+  </div>
+  }
+</div>

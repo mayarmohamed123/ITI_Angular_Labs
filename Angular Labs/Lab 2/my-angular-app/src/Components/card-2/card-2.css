@@ -1,0 +1,31 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 20px;
+}
+
+.user-card {
+  background: #f1f1f1;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: crimson;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+.last-card {
+  background-color: #ff4d4d;
+  color: white;
+}

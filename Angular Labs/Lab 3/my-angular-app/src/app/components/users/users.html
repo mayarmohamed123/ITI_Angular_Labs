@@ -1,0 +1,17 @@
+<div class="users-container">
+  <h2>Users List</h2>
+
+  @for (user of users; track user.id) {
+  <div class="user-card">
+    <img [src]="user.photo" [alt]="user.name" class="user-photo" />
+    <h3>{{ user.name }}</h3>
+    <p><strong>Job:</strong> {{ user.job }}</p>
+    <p>{{ user.bio }}</p>
+
+    <button (click)="deleteUser(user.id)" class="btn btn-delete">Delete</button>
+    <button (click)="goToDetails(user.id)" class="btn btn-details">
+      Details
+    </button>
+  </div>
+  }
+</div>

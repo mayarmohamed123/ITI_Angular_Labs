@@ -1,0 +1,11 @@
+.not-found-container {
+  text-align: center;
+  margin-top: 100px;
+  padding: 2rem;
+  color: #333;
+}
+
+.not-found-container a {
+  color: #007bff;
+  text-decoration: underline;
+}

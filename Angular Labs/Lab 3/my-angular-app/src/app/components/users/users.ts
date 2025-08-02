@@ -1,28 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user';
+import { Component, effect, signal, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService, User } from '../../services/user';
+// import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-users',
   imports: [],
   templateUrl: './users.html',
-  styleUrl: './users.css',
+  styleUrls: ['./users.css'],
 })
-export class UsersComponent implements OnInit {
-  users: any[] = [];
+export class UsersComponent {
+  private userService = inject(UserService);
+  private router = inject(Router);
 
-  constructor(private userService: UserService, private router: Router) {}
+  users = signal<User[]>([]);
 
-  ngOnInit() {
-    this.users = this.userService.getUsers();
-  }
-
-  deleteUser(id: number) {
-    this.userService.deleteUser(id);
-    this.users = this.userService.getUsers();
+  constructor() {
+    effect(() => {
+      this.userService.getUsers().subscribe((data) => this.users.set(data));
+    });
   }
 
   goToDetails(id: number) {
     this.router.navigate(['/user', id]);
+  }
+
+  deleteUser(id: number) {
+    const updated = this.users().filter((u) => u.id !== id);
+    this.users.set(updated);
   }
 }

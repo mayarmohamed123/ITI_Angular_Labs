@@ -1,9 +1,10 @@
-@if (user) {
+@if (user$ | async; as user) {
 <div class="card">
-  <img [src]="user.photo" alt="{{ user.name }}" width="150" />
   <h2>{{ user.name }}</h2>
-  <p><strong>Job:</strong> {{ user.job }}</p>
-  <p>{{ user.bio }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+  <p><strong>Website:</strong> {{ user.website }}</p>
   <button (click)="goBack()">Back to Users</button>
 </div>
+} @else {
+<p>Loading user details...</p>
 }

@@ -1,28 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AsyncPipe, CommonModule } from '@angular/common';
+import { Observable } from 'rxjs';
 import { UserService } from '../../services/user';
+import { User } from '../../services/user';
 
 @Component({
   selector: 'app-user-details',
-  imports: [],
+  imports: [AsyncPipe],
   templateUrl: './user-details.html',
-  styleUrl: './user-details.css',
+  styleUrls: ['./user-details.css'],
 })
 export class UserDetailsComponent implements OnInit {
-  user: any;
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private userService = inject(UserService);
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private userService: UserService
-  ) {}
+  user$!: Observable<User>;
 
-  ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id')!;
-    this.user = this.userService.getUserById(id);
+  ngOnInit(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    if (!isNaN(id)) {
+      this.user$ = this.userService.getUserDetailsById(id);
+    }
   }
 
-  goBack() {
+  goBack(): void {
     this.router.navigate(['/users']);
   }
 }
